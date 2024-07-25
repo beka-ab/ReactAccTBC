@@ -1,104 +1,63 @@
-.section-image-message {
+.padding-global {
+  padding-left: 47px;
+  padding-right: 47px;
+}
+.container {
   width: 100%;
-  padding: 32px 0;
-  @include responsive(medium) {
-    padding: 32px 45px;
-  }
-  @include responsive(large) {
-    display: flex;
-    justify-content: center;
-    padding: 32px 45px 60px;
-  }
-  .image-message-box {
-    width: inherit;
-    height: 360px;
-    position: relative;
-    overflow: hidden;
-    z-index: -99;
-    border-radius: 4px;
-    @include responsive(small) {
-      height: 450px;
-    }
-    @include responsive(large) {
-      max-width: 1110px;
-      height: 360px;
-    }
-    @include responsive(largest) {
-      height: 380px;
-    }
-    img {
-      width: inherit;
-      height: inherit;
-      object-fit: cover;
-      filter: contrast(100%) brightness(70%);
-    }
-    .image-message-text {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      position: absolute;
-      bottom: 20px;
-      left: 15px;
-      right: 15px;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.picturemaindiv {
+  padding: 32px 10.5% 60px;
+}
+.imgbody {
+  background-image: url("/img/tbcimgbody.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 392px;
+  border-radius: 6px;
+}
+.blackblur {
+  width: 100%;
+  height: 392px;
+  background-color: #00000045;
+  border-radius: 6px;
+}
+.img_txts {
+  color: #fff;
+  padding: 10% 8%;
+}
+.tbcbodytxt {
+  width: 50%;
+}
+.tbcimg_btn {
+  width: 17%;
+  height: 16px;
+  display: flex;
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  padding: 2% 3% 4%;
+  border-radius: 4px;
+  font-size: 12px;
+  grid-column-gap: 6px;
+  margin-top: 16px;
+  color: #fff;
+}
+.tbcimg_btn {
+  width: 17%;
+  height: 16px;
+  display: flex;
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  padding: 2% 3% 4%;
+  border-radius: 4px;
+  font-size: 12px;
+  grid-column-gap: 6px;
+  margin-top: 16px;
+  color: #fff;
+}
 
-      @include responsive(small) {
-        gap: 20px;
-        bottom: 36px;
-        left: 45px;
-        right: 45px;
-      }
-      @include responsive(large) {
-        bottom: 90px;
-        left: 80px;
-      }
-      @include responsive(largest) {
-        bottom: 105px;
-        left: 95px;
-      }
-      h1 {
-        font-family: "bold";
-        color: white;
-        @include responsive(small) {
-          font-size: 24px;
-        }
-        @include responsive(largest) {
-          font-size: 28px;
-        }
-      }
-      p {
-        font-size: 14px;
-        color: white;
-        @include responsive(medium) {
-          max-width: 450px;
-        }
-        @include responsive(largest) {
-          max-width: 540px;
-          font-size: 16px;
-        }
-      }
-      button {
-        height: 50px;
-        @include container(flex, center, center);
-        gap: 7px;
-        background: linear-gradient(15deg, #001682, #3240e5);
-        border: none;
-        border-radius: 4px;
-        @include responsive(medium) {
-          width: 151px;
-        }
-        p {
-          margin-top: 2px;
-          font-family: "bold";
-          font-size: 12px;
-        }
-        svg {
-          fill: white;
-        }
-        &:hover {
-          background: #3295ce;
-          transition: 0.5s;
-        }
-      }
-    }
-  }
+.tbcimg_btn:hover {
+  background: #3295ce;
+  transition: 1s;
 }
