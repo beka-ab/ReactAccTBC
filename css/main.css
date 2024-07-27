@@ -129,7 +129,13 @@
 }
 
 .img_scale:hover .grid_image_wrapper img {
-  transform: scale(1.05);
+  .sec_one {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 365px;
+    padding-top: 20px;
+    /* padding-bottom: 60px; */
+  }
   transition: 1s;
 }
 .w-inline-block {
@@ -1386,5 +1392,121 @@ th {
   .offers-div {
     max-width: 1200px;
     margin-inline: auto;
+  }
+}
+.sec_one {
+  width: 100%;
+  height: 365px;
+  padding-top: 20px;
+}
+
+.sec_last {
+  margin-bottom: 60px;
+}
+.img_cont {
+  width: 100%;
+  min-height: 360px;
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../assets/images/mainimage.webp");
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+}
+.img_contt {
+  background-position: center;
+
+  background-image: url("../assets/images/mainimage1.png");
+}
+.img_text {
+  /* min-height: 360px; */
+  display: flex;
+  padding: 80px;
+}
+.img_text_contt {
+  max-width: 450px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.img_text_contt h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+.img_text_contt p {
+  font-size: 14px;
+  font-family: TBCX, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.img_text_contt button {
+  background-image: linear-gradient(15deg, #001682, #3240e5);
+  display: flex;
+  gap: 6px;
+  color: #fff;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  width: 150px;
+  height: 55px;
+  border: none;
+}
+.img_text_contt button:hover {
+  background-image: linear-gradient(15deg, #3295ce, #3295ce);
+  transition: 2s;
+}
+@media (max-width: 480px) {
+  .img_cont {
+    position: absolute;
+    left: 0;
+    padding: 0;
+    background-position: center;
+  }
+
+  .img_text {
+    padding: 150px 20px 10px 20px;
+  }
+  .img_cont {
+    border-radius: 0;
+  }
+  .img_text_contt button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .img_sec {
+    width: 100%;
+  }
+
+  .img_cont {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    border-radius: 0;
+    padding: 100px 45px 36px 45px;
+  }
+  .img_text_contt button {
+    width: 100%;
+  }
+  .img_text_contt {
+    width: 100%;
+    max-width: 100%;
+  }
+  .img_text {
+    padding: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: end;
+  }
+  .sec_one {
+    height: 500px;
   }
 }
