@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
   const mobileMenu = document.querySelector(".header_menu_mobile_version");
 
-  const triggerMenu = () => {
+  const toggleMenu = () => {
     burgerMenu.classList.toggle("open");
     header.classList.toggle("header_bg_color");
 
@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  burgerMenu.addEventListener("click", triggerMenu);
+  burgerMenu.addEventListener("click", toggleMenu);
   window.addEventListener("resize", handleResize);
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const buttonMenuTrigger = document.querySelector(".button_menu_trigger");
+  const buttons = document.querySelector(".buttons");
+  const buttonFirst = document.querySelector(".button_first");
+  const buttonSec = document.querySelector(".button_sec");
+
+  buttonMenuTrigger.addEventListener("click", function () {
+    buttons.classList.toggle("active");
+    buttons.classList.toggle("hidden");
+    buttonFirst.classList.toggle("hidden");
+    buttonSec.classList.toggle("hidden");
+  });
 });
