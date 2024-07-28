@@ -38,9 +38,7 @@ body {
   --border-color_secondary: #eef1f1;
   --default-font-weight: 500;
 }
-/* .main {
-  background-color: #f7f8f8;
-} */
+
 .headline-arrow {
   display: flex;
   align-items: center;
