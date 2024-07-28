@@ -54,3 +54,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", closeAllDropdowns);
 });
+const titles = document.querySelectorAll(".footer-arrow-div-title");
+const arrows = document.querySelectorAll(".arrow");
+const contents = document.querySelectorAll(".footer-arrow-div-content");
+let expandedContent = null;
+
+titles.forEach((title, index) => {
+  title.addEventListener("click", () => {
+    const isCurrentlyExpanded = expandedContent === index;
+    expandedContent = isCurrentlyExpanded ? null : index;
+
+    arrows.forEach((arrow, i) => {
+      if (i === expandedContent) {
+        arrow.classList.add("isExpanded");
+      } else {
+        arrow.classList.remove("isExpanded");
+      }
+    });
+
+    contents.forEach((content, i) => {
+      if (i === expandedContent) {
+        content.classList.add("isExpanded");
+      } else {
+        content.classList.remove("isExpanded");
+      }
+    });
+  });
+});

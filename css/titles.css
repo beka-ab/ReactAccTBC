@@ -1,8 +1,8 @@
 .section-rewards {
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 47px;
-  padding-right: 47px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
 }
 .offers-wrapper {
@@ -11,16 +11,33 @@
   margin-left: auto;
   margin-right: auto;
 }
+.more {
+  cursor: pointer;
+}
 .heading-wrapper {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 36px;
   display: flex;
 }
+.third-slider-top-text h1 {
+  font-size: 14px;
+  color: #141719;
+  font-weight: 700;
+}
+.offer_arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.all-offer {
+  font-size: 12px;
+  padding-right: 15px;
+}
 .offers-heading {
   color: #141719;
   margin-top: 0;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 700;
 }
 .slider-wrapper {
@@ -114,4 +131,70 @@
   transition-duration: 0ms;
   background: #182cc0;
   border-radius: 1px;
+}
+/* rewards */
+.reward-div {
+  margin-bottom: 70px;
+}
+
+.reward-div h2 {
+  padding: 0 15px;
+  font-size: 14px;
+  color: #141719;
+  margin-bottom: 20px;
+}
+
+.reward-slide:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.reward-slide img {
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+.reward-slide h3 {
+  font-size: 14px;
+  color: #141719;
+  margin-bottom: 20px;
+  line-height: 35px;
+}
+
+.reward-slide p {
+  font-size: 14px;
+  color: #555f62;
+}
+.reward-swiper {
+  padding-bottom: 30px !important;
+}
+
+.reward-swiper-container {
+  height: 300px;
+  overflow-x: hidden;
+  padding-block: 0 20px;
+}
+
+.reward-slide {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease;
+}
+
+.reward-swiper-scrollbar {
+  height: 2px !important;
+  background: #d8d8d8 !important;
+}
+
+.reward-swiper-scrollbar .swiper-scrollbar-drag {
+  background: #182cc0 !important;
+}
+.scrollbar-arrows-div {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .scrollbar-arrows-div {
+    display: block;
+  }
 }

@@ -1,8 +1,6 @@
 const sliders = document.querySelectorAll(".slider");
 const sliderThumbs = document.querySelectorAll(".slider-scrollbar-thumb");
 
-console.log(sliders);
-
 for (let i = 0; i < sliders.length; i++) {
   let isDown = false;
   let startX;
@@ -89,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const progress = currentTranslate / maxTranslate;
       const maxDragLeft = scrollbar.offsetWidth - drag.offsetWidth;
       drag.style.transform = `translateX(${progress * maxDragLeft}px)`;
-      console.log(`Progress: ${progress}, Max Drag Left: ${maxDragLeft}`);
     } else {
       console.error("maxTranslate is not a function on swiper instance");
     }
