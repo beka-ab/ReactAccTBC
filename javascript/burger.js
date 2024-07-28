@@ -32,16 +32,28 @@ document.addEventListener("DOMContentLoaded", () => {
   burgerMenu.addEventListener("click", toggleMenu);
   window.addEventListener("resize", handleResize);
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const buttonMenuTrigger = document.querySelector(".button_menu_trigger");
-  const buttons = document.querySelector(".buttons");
-  const buttonFirst = document.querySelector(".button_first");
-  const buttonSec = document.querySelector(".button_sec");
+const triger_icon_over = document.querySelector(".triger_icon_over");
+const triger_icon = document.querySelector(".triger_icon");
+const button_menu_trigger = document.querySelector(".button_menu_trigger");
+const button_clicked_content = document.querySelector(
+  ".button_clicked_content"
+);
+const button_menu = document.querySelector(".button_menu");
+let clicked = true;
+button_menu_trigger.addEventListener("click", () => {
+  if (clicked) {
+    button_clicked_content.style.opacity = "1";
+    triger_icon.style.opacity = "0";
+    triger_icon_over.style.opacity = "1";
+    button_menu.style.gridTemplateRows = "1fr 56px";
 
-  buttonMenuTrigger.addEventListener("click", function () {
-    buttons.classList.toggle("active");
-    buttons.classList.toggle("hidden");
-    buttonFirst.classList.toggle("hidden");
-    buttonSec.classList.toggle("hidden");
-  });
+    clicked = false;
+  } else {
+    button_clicked_content.style.opacity = "0";
+    triger_icon_over.style.opacity = "0";
+    triger_icon.style.opacity = "1";
+    button_menu.style.gridTemplateRows = "56px";
+
+    clicked = true;
+  }
 });
